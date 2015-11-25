@@ -15,4 +15,4 @@ QUOTES = [
 module.exports = (robot) ->
   robot.respond /(gay)( .*)/i, (msg) ->
     message = msg.random(QUOTES).replace(/<name>/, msg.match[2])
-    msg.send(message)
+    msg.reply(message)
