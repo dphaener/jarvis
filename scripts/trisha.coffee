@@ -5,5 +5,5 @@ QUOTES = [
 ]
 
 module.exports = (robot) ->
-  robot.respond /(Trisha)/i, (msg) ->
+  robot.respond /.*(Trisha).*/i, (msg) ->
     msg.send msg.random(QUOTES)
