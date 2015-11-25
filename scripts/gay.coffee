@@ -9,10 +9,12 @@
 
 QUOTES = [
   "<name> is a really queer bastard",
-  "I like it when <name> jerks me off"
+  "I like it when <name> jerks me off",
+  "<name> likes to motorboat Tricia's floppy tits",
+  "Please <name>, use more lube next time"
 ]
 
 module.exports = (robot) ->
-  robot.respond /(gay)( .*)/i, (msg) ->
+  robot.respond /(gay )(.*)/i, (msg) ->
     message = msg.random(QUOTES).replace(/<name>/, msg.match[2])
-    msg.reply(message)
+    msg.send(message)
